@@ -1,0 +1,34 @@
+Début
+    XGROUPE ← ""
+    MAX ← 0
+    I ← 1
+
+    Tant que NOMGRO[I] ≠ "TARTAMPION" faire
+
+        Si TYPPIR[I] = "PROPULSION MOTEUR" alors
+
+            Extraire ANNEE de DATLIV[I]
+            Si ANNEE = 2023 alors
+
+                Extraire MOIS de DATLIV[I]
+                Si MOIS ≥ 1 alors
+                    Si MOIS ≤ 6 alors
+
+                        Si PRIPIR[I] > MAX alors
+                            MAX ← PRIPIR[I]
+                            XGROUPE ← NOMGRO[I]
+                        FinSi
+
+                    FinSi
+                FinSi
+
+            FinSi
+
+        FinSi
+
+        I ← I + 1
+
+    FinTantQue
+
+    Afficher XGROUPE
+Fin

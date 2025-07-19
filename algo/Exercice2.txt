@@ -1,0 +1,33 @@
+Début
+    XNOMBRE ← 0
+    XCOUTOT ← 0
+    I ← 1
+
+    Tant que NOMGRO[I] ≠ "TARTAMPION" faire
+
+        Si TYPPIR[I] = "PROPULSION PAGAI" alors
+
+            Extraire ANNEE de DATLIV[I]
+            Si ANNEE = 2023 alors
+
+                Extraire MOIS de DATLIV[I]
+                Si MOIS ≥ 7 alors
+                    Si MOIS ≤ 12 alors
+
+                        XNOMBRE ← XNOMBRE + 1
+                        XCOUTOT ← XCOUTOT + PRIPIR[I]
+
+                    FinSi
+                FinSi
+
+            FinSi
+
+        FinSi
+
+        I ← I + 1
+
+    FinTantQue
+
+    Afficher XNOMBRE
+    Afficher XCOUTOT
+Fin
